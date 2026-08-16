@@ -19,7 +19,6 @@ def testing_query(city : str, risk : str):
   return{
     "No. of memebers found" : len(filtered),
     "city" : city,
-    "id" : id,
     "risk" : risk,
     "results" : filtered
   }
