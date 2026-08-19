@@ -6,9 +6,18 @@ app = FastAPI()
 students = {
   "S001":{"name":"Aditya", "marks":90, "grade":"A"},
   "S002":{"name":"Pranjal", "marks":67, "grade":"B"},
-  "S003":{"name":"Miya", "marks":69, "grade":"B"},``
+  "S003":{"name":"Miya", "marks":69, "grade":"B"},
   "S004":{"name":"Adrish", "marks":10, "grade":"F"}
 }
+
+##input schema
+
+class MarksSubmission(BaseModel):
+  students_id : str
+  name : str
+  marks : int
+  grade : str
+
 
 @app.get("/student/{student_id}")
 def get_student(student_id : str):
